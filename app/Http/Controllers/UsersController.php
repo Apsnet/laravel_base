@@ -47,7 +47,6 @@ class UsersController extends Controller
         ];
 
         $user = User::create($data);
-        event(new UserRegistred($user));
         return response(['data' => $user], 200);
     }
 

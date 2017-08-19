@@ -27,6 +27,5 @@ class CreateRelationships
      */
     public function handle(UserRegistred $event)
     {
-        foreach (Service::all() as $service) $event->user->services()->attach($service);
     }
 }
